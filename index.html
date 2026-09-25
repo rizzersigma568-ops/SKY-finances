@@ -27,7 +27,7 @@
 <span class="pill in">India</span> <span class="pill us">USA</span>
 <h2>Research, compare, and understand your funds in one place.</h2>
 <p>Browser-first MVP based on the supplied product requirements. It uses sample values until verified financial-data sources and licensing are connected.</p>
-<button class="button primary" data-go="explore">Explore funds</button>
+<button class="button primary" data-go="explore">Explore funds</button> <button class="button" id="setup-open">Set up portfolio</button>
 </div><div class="hero-side"><b>Why did my portfolio change?</b><p>Market movement, FX movement, and contributions are shown as separate concepts.</p><hr><b>Design principle</b><p>The app explains documented differences instead of automatically declaring a fund “best”.</p></div></div>
 <div class="stats">
 <div class="card"><small>Portfolio value</small><strong>₹4,83,910</strong><em class="up">+8.4% illustrative</em></div>
@@ -65,6 +65,15 @@
 <div class="card"><div class="head"><h2>Watchlist</h2><small>Configurable alerts can connect later</small></div><div id="watch"></div></div>
 </section>
 </main></div>
+<div id="setup-modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head"><div><small class="eyebrow">Portfolio setup</small><h2>Let’s add your investments</h2><p class="muted">Tell us how many funds you have, which funds they are, how much you invested, and when you invested.</p></div><button class="close" id="setup-close" aria-label="Close">×</button></div>
+    <label class="field-label" for="fund-count">How many funds do you have?</label>
+    <input id="fund-count" class="full-input" type="number" min="1" max="20" value="1">
+    <div id="holding-fields"></div>
+    <div class="modal-actions"><button class="button" id="setup-cancel">Cancel</button><button class="button primary" id="setup-save">Save my portfolio</button></div>
+  </div>
+</div>
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sky Finance — India + USA</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+<aside>
+  <div class="brand"><div class="logo">S</div><div><b>Sky Finance</b><small>India + USA</small></div></div>
+  <nav>
+    <button class="nav active" data-view="home">Home</button>
+    <button class="nav" data-view="explore">Explore</button>
+    <button class="nav" data-view="compare">Compare</button>
+    <button class="nav" data-view="portfolio">Portfolio</button>
+    <button class="nav" data-view="watchlist">Watchlist</button>
+  </nav>
+  <div class="status"><span></span> Research mode<br><small>No trading or brokerage connection</small></div>
+</aside>
+<main>
+<header><div><small class="eyebrow">Fund intelligence</small><h1 id="title">Your global portfolio</h1></div><button id="currency" class="button">Base: INR</button></header>
+
+<section id="home" class="screen">
+<div class="hero card"><div>
+<span class="pill in">India</span> <span class="pill us">USA</span>
+<h2>Research, compare, and understand your funds in one place.</h2>
+<p>Browser-first MVP based on the supplied product requirements. It uses sample values until verified financial-data sources and licensing are connected.</p>
+<button class="button primary" data-go="explore">Explore funds</button>
+</div><div class="hero-side"><b>Why did my portfolio change?</b><p>Market movement, FX movement, and contributions are shown as separate concepts.</p><hr><b>Design principle</b><p>The app explains documented differences instead of automatically declaring a fund “best”.</p></div></div>
+<div class="stats">
+<div class="card"><small>Portfolio value</small><strong>₹4,83,910</strong><em class="up">+8.4% illustrative</em></div>
+<div class="card"><small>Total invested</small><strong>₹4,46,450</strong><em>Manual holdings</em></div>
+<div class="card"><small>India allocation</small><strong>49%</strong><em>Base-currency view</em></div>
+<div class="card"><small>USA allocation</small><strong>51%</strong><em>Includes illustrative FX</em></div>
+</div>
+<div class="two">
+<div class="card"><h3>Portfolio allocation</h3><div class="bar"><i class="india"></i><i class="usa"></i></div><div class="split"><span>India 49%</span><span>USA 51%</span></div></div>
+<div class="card"><h3>Watchlist snapshot</h3><div class="row"><div><b>Parag Parikh Flexi Cap Fund</b><small>India · Equity</small></div><b>19.1%</b></div><div class="row"><div><b>Vanguard Total Stock Market ETF</b><small>USA · ETF</small></div><b>15.9%</b></div></div>
+</div>
+</section>
+
+<section id="explore" class="screen hidden">
+<div class="card"><div class="head"><h2>Explore funds</h2><small>Sample fund universe</small></div>
+<div class="filters"><input id="search" placeholder="Search funds or benchmarks"><select id="region"><option>All</option><option>India</option><option>USA</option></select><select id="type"><option>All</option><option>Index</option><option>Equity</option><option>Debt</option><option>ETF</option><option>Bond</option></select></div>
+<div id="funds"></div>
+<p class="note">Sample data only. Production requires verified NAV/price, holdings, expense, AUM, benchmark, distribution, corporate-action, FX, timestamp, and licensing workflows.</p>
+</div>
+</section>
+
+<section id="compare" class="screen hidden">
+<div class="card"><div class="head"><h2>Compare funds</h2><small>2–4 funds side by side</small></div><div id="compare-list"></div><div id="compare-table"></div>
+<p class="note">The comparison surface presents documented differences and does not generate an automatic “best fund” verdict.</p></div>
+</section>
+
+<section id="portfolio" class="screen hidden">
+<div class="two">
+<div class="card"><div class="head"><h2>Manual holdings</h2><small>No brokerage connection</small></div><div id="holdings"></div><button class="button primary" id="add">Add sample holding</button></div>
+<div class="card"><h3>Portfolio explanation</h3><p>1. Calculate local-currency performance.</p><p>2. Separate FX contribution for US holdings.</p><p>3. Treat contributions and withdrawals as cash flows.</p><p>4. Keep the financial calculation service separate from the AI explanation layer.</p></div>
+</div>
+</section>
+
+<section id="watchlist" class="screen hidden">
+<div class="card"><div class="head"><h2>Watchlist</h2><small>Configurable alerts can connect later</small></div><div id="watch"></div></div>
+</section>
+</main></div>
+<script src="app.js"></script>
+</body>
+</html>
